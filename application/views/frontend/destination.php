@@ -69,7 +69,32 @@
             <div class="text-black font-weight-bold ft-16 mb-2">Informasi Wisata</div>
             <div class="innerhtml"><?=$d_detail['deskripsi_wisata'];?></div>
           </div>
-
+          <?php if (!empty($d_detail['hotel_info']) || !empty($d_detail['food_info'])): ?>
+          <div class="bg-sec w-100 rounded-10 p-3 mt-3">
+            <div class="text-black font-weight-bold ft-16 mb-2">Akomodasi dan Tempat Makan di Sekitar</div>
+            <p>Temukan hotel dan tempat makan di sekitar <strong><?= $d_detail['nama_wisata']; ?></strong>:</p>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2">
+                <a
+                  href="https://www.google.com/maps/search/hotel+di+sekitar+<?= urlencode($d_detail['hotel_info'] ?? $d_detail['nama_wisata']); ?>/"
+                  target="_blank"
+                  class="btn btn-sm btn-outline-primary"
+                >
+                  🏨 Cari Hotel di Google Maps
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.google.com/maps/search/tempat+makan+di+sekitar+<?= urlencode($d_detail['food_info'] ?? $d_detail['nama_wisata']); ?>/"
+                  target="_blank"
+                  class="btn btn-sm btn-outline-success"
+                >
+                  🍽️ Cari Tempat Makan di Google Maps
+                </a>
+              </li>
+            </ul>
+          </div>
+          <?php endif; ?>
           <?php if($d_detail['nomor_resmi']!='' || $d_detail['situs_resmi']!=''): ?>
           <div class="bg-sec w-100 rounded-10 p-3 mt-3 d-visi-768" id="jamoperational">
             <div class="text-black font-weight-bold ft-16 mb-2">Informasi Kontak</div>

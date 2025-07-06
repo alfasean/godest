@@ -151,7 +151,7 @@ class Index_model extends CI_Model {
                 $harga_wisata = "";
             }
 
-            $data = array(
+           $data = array(
                 'wisata_id'             => $row['wisata_id'],
                 'nama_wisata'           => $row['nama_wisata'],
                 'slug'                  => $row['slug'],
@@ -176,7 +176,9 @@ class Index_model extends CI_Model {
                 'ulasan'                => $row['ulasan'],
                 'rating'                => (empty($row['rating']) || $row['rating'] == 0) ? '5' : $row['rating'],
                 'fotoutama'             => $fotoutama['foto'],
-                'galeri'                => $galeri
+                'galeri'                => $galeri,
+                'hotel_info'            => $row['hotel_info'],       
+                'food_info'             => $row['food_info']          
             );
         }
 

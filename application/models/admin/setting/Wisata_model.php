@@ -38,6 +38,8 @@ class Wisata_model extends CI_Model {
             'info_jadwal'  		    => $this->input->post('info_jadwal'),
             'is_jadwal'  		    => $this->input->post('jadwal'),
             'is_status'  		    => $this->input->post('status'),
+            'hotel_info'            => $this->input->post('hotel_info'),
+            'food_info'             => $this->input->post('food_info'),
             'created_at'  		    => date('Y-m-d H:i:s')
         ];
         $res = $this->db->insert('m_wisata', $data);
@@ -80,6 +82,8 @@ class Wisata_model extends CI_Model {
             'minggu'  		        => $this->input->post('minggu').'__'.$this->input->post('minggu1'),
             'info_jadwal'  		    => $this->input->post('info_jadwal'),
             'is_jadwal'  		    => $this->input->post('jadwal'),
+            'hotel_info'            => $this->input->post('hotel_info'),
+            'food_info'             => $this->input->post('food_info'),
             'is_status'  		    => $this->input->post('status')
         ]);
         $this->db->where('wisata_id', $id);

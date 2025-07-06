@@ -85,6 +85,14 @@
               <option value="n">Tidak Aktif</option>
             </select>
           </div>
+          <div class="col-xl-12 col-lg-12 col-md-12">
+            <label class="form-label">Informasi Hotel (opsional)</label>
+            <textarea name="hotel_info" class="form-control" rows="2"></textarea>
+          </div>
+          <div class="col-xl-12 col-lg-12 col-md-12">
+            <label class="form-label">Informasi Tempat Makan (opsional)</label>
+            <textarea name="food_info" class="form-control" rows="2"></textarea>
+          </div>
           <div class="col-xl-12 col-md-12 col-sm-12" id="opjamnya">
             <?php
             $hari = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu'];
